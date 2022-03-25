@@ -78,7 +78,9 @@ extension PageViewController:  UIPageViewControllerDelegate, UIPageViewControlle
                 return createLocationDetailViewController(forPage: currentViewController.locationIndex+1)
             }
         }
+        
         return nil
+        
     }
     
 }
