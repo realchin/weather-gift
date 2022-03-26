@@ -33,12 +33,15 @@ class LocationDetailViewController: UIViewController {
         pageControl.numberOfPages = pageViewController.weatherLocations.count
         pageControl.currentPage = locationIndex
         
+        
+        
         weatherDetail.getData {
             DispatchQueue.main.async {
                 self.dateLabel.text = self.weatherDetail.timezone
                 self.placeLabel.text = self.weatherDetail.name
                 self.temperatureLabel.text = "\(self.weatherDetail.temperature)°"
                 self.summaryLabel.text = self.weatherDetail.summary
+                self.imageView.image = UIImage(named: self.weatherDetail.dailyIcon)
             }
         }
         
