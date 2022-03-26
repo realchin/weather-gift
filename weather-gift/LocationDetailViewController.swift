@@ -8,13 +8,9 @@
 import UIKit
 
 private let dateFormatter: DateFormatter = {
-    
-    print("📆I just created a Date Formatter!")
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "EEEE, MMM d"
     return dateFormatter
-    
-    
 }()
 
 class LocationDetailViewController: UIViewController {
